@@ -54,10 +54,17 @@ export const Navbar = () => {
     <NextUINavbar maxWidth="xl" position="sticky">
       <NavbarContent className="basis-1/5 sm:basis-full" justify="start">
         <NavbarBrand as="li" className="gap-3 max-w-fit">
-          <NextLink className="flex justify-start items-center gap-1" href="/">
-            <Logo size={100} />
-            {/* <Image></Image> */}
-            <p className="font-bold text-inherit">Next Level English BD</p>
+          <NextLink
+            className="flex justify-start items-center gap-1"
+            href={siteConfig.links.youtube}
+          >
+            <Image
+              src="https://res.cloudinary.com/daqvhd097/image/upload/v1736173856/next_level_englihs_bd_logo_tseegq.png" // Path to your image
+              alt="Logo"
+              width={36}
+              height={36}
+            />
+            <p className="font-bold text-green-800">Next Level English BD</p>
           </NextLink>
         </NavbarBrand>
         {/* <ul className="hidden lg:flex gap-4 justify-start ml-2">
@@ -113,11 +120,14 @@ export const Navbar = () => {
       </NavbarContent>
 
       <NavbarContent className="sm:hidden basis-1 pl-4" justify="end">
-        <Link isExternal aria-label="Github" href={siteConfig.links.github}>
+        {/* <Link isExternal aria-label="Github" href={siteConfig.links.github}>
           <GithubIcon className="text-default-500" />
+        </Link> */}
+        <Link isExternal aria-label="Twitter" href={siteConfig.links.youtube}>
+          <YouTubeIcon className="text-default-500" />
         </Link>
         <ThemeSwitch />
-        <NavbarMenuToggle />
+        {/* <NavbarMenuToggle /> */}
       </NavbarContent>
 
       <NavbarMenu>
